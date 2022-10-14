@@ -1,4 +1,7 @@
 console.log("Welcome to the main module")
+import { plantSeeds } from "./tractor.js"
+import { harvestPlants } from "./harvester.js"
+// import { addPlant } from "./field.js"
 
 // import createPlan function 
 import {createPlan} from "./plan.js"
@@ -14,18 +17,31 @@ import {createSoybean} from "./seeds/soybean.js"
 import {createSunflower} from "./seeds/sunflower.js"
 // import wheat here
 import {createWheat} from "./seeds/wheat.js"
-
-// const yearlyPlan = createPlan()
-// console.log(yearlyPlan)
-
-// TESING "create" functions
-const thing = createCorn()
-// console.log(thing)
-
-import { addPlant } from "./field.js"
 import { usePlants } from "./field.js"
 
-// TESING
-addPlant(thing)
-const planted = usePlants()
-console.log(planted)
+const yearlyPlan = createPlan()
+// console.log(yearlyPlan)
+
+// TESTING "create" functions
+// const thing = createCorn()
+// console.log(thing)
+
+
+// TESTING adding seeds to field
+// addPlant(thing)
+// const using = usePlants()
+// console.log(using)
+
+// TESTING planting all seeds and checking array
+const planted = plantSeeds(yearlyPlan)
+// console.log(planted)
+
+// const added = addPlant()
+// console.log(added)
+
+const used = usePlants()
+console.log(used)
+
+const toSell = harvestPlants(used)
+console.log(toSell)
+
