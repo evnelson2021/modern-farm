@@ -1,6 +1,8 @@
 console.log("Welcome to the main module")
 import { plantSeeds } from "./tractor.js"
+import { usePlants } from "./field.js"
 import { harvestPlants } from "./harvester.js"
+import { catalogHTML } from "./catalog.js"
 // import { addPlant } from "./field.js"
 
 // import createPlan function 
@@ -17,7 +19,7 @@ import {createSoybean} from "./seeds/soybean.js"
 import {createSunflower} from "./seeds/sunflower.js"
 // import wheat here
 import {createWheat} from "./seeds/wheat.js"
-import { usePlants } from "./field.js"
+
 
 const yearlyPlan = createPlan()
 // console.log(yearlyPlan)
@@ -45,3 +47,22 @@ console.log(used)
 const toSell = harvestPlants(used)
 console.log(toSell)
 
+// const harvested = catalogHTML(toSell)
+// console.log(harvested)
+
+const catalogged = catalogHTML(toSell)
+
+// const cropHTML = () => {
+//     let html = `<div class="flexbox">`
+//     html += catalogged
+//     html += `</div>`
+//     return html
+// }
+
+
+const parentHTMLElement = document.querySelector(".container")
+parentHTMLElement.innerHTML = catalogged
+
+// export const functionHere = () => {
+//     return database.plant.map(plant => ({...plant}))
+// }

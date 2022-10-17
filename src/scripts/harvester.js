@@ -38,6 +38,13 @@ export const harvestPlants = (anyArray) =>{
     return growArray
 }
 
+// export const getCrop = () =>{
+//     return growArray.anyArray.map((seedObj) => ({ ...seedObj}))
+// } 
+// // ???
+    
+
+
 // pushing into new growArray
 // for every seedObj in whatever array is passed in, start at index 0 and stop at index equal to seedObj.output (#) incrementing one at a time
 // if it's an array of arrays, only push in 1/2 of the value of object.output. (For corn)
